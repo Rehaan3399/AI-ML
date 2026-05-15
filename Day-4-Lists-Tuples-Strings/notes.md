@@ -62,8 +62,6 @@ Sorts list in ascending order.
 ## reverse()
 Reverses list order.
 
----
-
 # Tuple Concepts
 
 ## Tuple
