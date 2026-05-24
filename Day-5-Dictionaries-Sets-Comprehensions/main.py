@@ -149,34 +149,46 @@ numbers=[1,2,3,4,5,6,78,9,9845]
 even_numbers=filter(lambda i:i%2==0, numbers)
 print(list(even_numbers))
 
-#PROBLEM 1 — CHARACTER FREQUENCY
-"""text="Hello Python"
-frequency={}
-for i in text:"""
 
+#######################################FINAL PHASE — HACKERRANK STYLE PROBLEMS########################################
+#PROBLEM 1 — CHARACTER FREQUENCY
+from collections import Counter
+x="Python"
+print(Counter(x))
+       
+from collections import Counter
+sentence="Koding Caravan"
+print(Counter(sentence))
 
 #PROBLEM 2 — FIND COMMON ELEMENTS
 list1 = [1,2,3,4]
 list2 = [3,4,5,6]
-common_elements=[]
-for i in list1:
-    if i in list2:
-        common_elements.append(i)
-print(common_elements)   
+common = []
+for num in list1:
+    if num in list2:
+        common.append(num)
+print(common)
 
 
-#PROBLEM 3 — DICTIONARY FROM LISTS
-
+#Dictionary From List
 names = ["Ali","Rahul","John"]
 marks = [90,85,95]
-result=zip(names, marks)
-print(dict(result))
+student_data = dict(zip(names,marks))
+print(student_data)
 
-#PROBLEM 4 — SQUARE ONLY EVEN NUMBERS
-numbers=[2,34,56,78,93,35,10,234,54,78]
-even_squares=[i*i for i in numbers if i%2==0]
-print(even_squares)
+#Squares only Even Numbers
+numbers = [1,2,3,4,5,6]
+result = [i*i for i in numbers if i%2==0]
+print(result)
 
-#PROBLEM 5 — WORD LENGTH DICTIONARY
+
+#Word Length Dictionary
 words = ["apple","banana","kiwi"]
+lengths = {
+    word:len(word) for word in words
+}
+print(lengths)
+
+
+
 

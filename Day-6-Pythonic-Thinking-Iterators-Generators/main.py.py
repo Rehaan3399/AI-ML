@@ -11,7 +11,7 @@ my_iterator=iter(my_list)
 print("__iter__" in dir(my_list))
 print("__next__" in dir(my_iterator))
 
-"""
+
 #PROGRAM 1 — iter() + next()
 numbers = [10,20,30]
 it=iter(numbers)
@@ -46,11 +46,10 @@ while True:
 
 
 
-#####################################################generators######################################################
+######################################################generators######################################################
 L=[x for x in range(1000000000)]
 import sys
 sys.getsizeof(L)
-
 
 
 x=range(1000000000)
@@ -76,7 +75,6 @@ def gen_demo():
 gen=gen_demo()
 for i in gen:
     print(i)
-
 
 
 #PHASE 3 — BASIC GENERATOR
@@ -144,3 +142,4 @@ b=a.copy()
 print(id(a)==id(b)) #false because they are different objects in memory
 b[0]=100
 print(a) #modyfying b doesnot modify a because they are different objects in memory
+
