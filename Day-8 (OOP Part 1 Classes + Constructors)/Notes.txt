@@ -1,3 +1,443 @@
+Use this as your **Day 8 future reference notes** in:
+
+```text
+Day-8-OOP-Classes-Objects/notes.md
+```
+````markdown
+# Day 8 — OOP (Classes, Objects, Constructors)
+
+## Topics Learned
+- Class
+- Object
+- self
+- __init__()
+- Instance Variables
+- Class Variables
+- Instance Methods
+- BankAccount Project
+---
+# What is OOP?
+
+OOP (Object-Oriented Programming) is a way of organizing code using classes and objects.
+
+Instead of storing data and functions separately, OOP keeps them together.
+
+Example:
+
+Bank Account:
+- account holder name
+- balance
+- deposit()
+- withdraw()
+
+All belong to one object.
+---
+# Class
+A class is a blueprint/template for creating objects.
+Example:
+```python
+class Student:
+    pass
+```
+
+Class itself is not a real student.
+
+It is only a design.
+
+---
+# Object
+
+An object is an actual instance created from a class.
+
+Example:
+
+```python
+s1 = Student()
+```
+
+Here:
+
+```text
+Student → Class
+s1 → Object
+```
+
+---
+
+# self Keyword
+
+self refers to the current object.
+
+Example:
+
+```python
+class Student:
+
+    def greet(self):
+        print("Hello")
+```
+
+When:
+
+```python
+s1.greet()
+```
+
+Python internally does:
+
+```python
+Student.greet(s1)
+```
+
+Therefore self refers to s1.
+
+---
+
+# Constructor (__init__)
+
+Constructor runs automatically when object is created.
+
+Example:
+
+```python
+class Student:
+
+    def __init__(self,name):
+        self.name = name
+```
+
+Object creation:
+
+```python
+s1 = Student("Mohammad")
+```
+
+Python automatically calls:
+
+```python
+__init__()
+```
+
+---
+
+# Instance Variables
+
+Variables belonging to each object.
+
+Example:
+
+```python
+self.name = name
+self.age = age
+```
+
+Each object stores its own values.
+
+Example:
+
+```python
+s1 = Student("Mohammad")
+s2 = Student("Rahul")
+```
+
+Output:
+
+```text
+s1.name → Mohammad
+s2.name → Rahul
+```
+
+Different values for different objects.
+
+---
+
+# Class Variables
+
+Variables shared by all objects.
+
+Example:
+
+```python
+class Student:
+
+    school = "ABC College"
+```
+
+All objects access same value.
+
+Example:
+
+```python
+s1.school
+s2.school
+```
+
+Both return:
+
+```text
+ABC College
+```
+
+---
+
+# Instance Methods
+
+Functions inside class.
+
+Example:
+
+```python
+class Calculator:
+
+    def add(self,a,b):
+        return a+b
+```
+
+Call:
+
+```python
+c1 = Calculator()
+
+c1.add(10,20)
+```
+
+Output:
+
+```text
+30
+```
+
+---
+
+# BankAccount Project
+
+## Features
+
+- Deposit
+- Withdraw
+- Show Balance
+- Transaction History
+- Transfer Money
+
+---
+
+# Constructor
+
+```python
+def __init__(self,name,balance=0):
+```
+
+Stores:
+
+```python
+self.name
+self.balance
+self.transaction_history
+```
+
+---
+
+# Deposit Method
+
+```python
+def deposit(self,amount):
+```
+
+Adds amount to balance.
+
+Example:
+
+```python
+account.deposit(500)
+```
+
+---
+
+# Withdraw Method
+
+```python
+def withdraw(self,amount):
+```
+
+Checks balance before withdrawing.
+
+If balance insufficient:
+
+```text
+Insufficient balance
+```
+
+---
+
+# Show Balance
+
+```python
+def show_balance(self):
+```
+
+Displays current balance.
+
+---
+
+# Transaction History
+
+Stores all transactions in list.
+
+Example:
+
+```python
+[
+ "Deposited 500",
+ "Withdrawn 200"
+]
+```
+
+---
+
+# Transfer Method
+
+Transfers money from one account to another.
+
+Example:
+
+```python
+account1.transfer(account2,200)
+```
+
+Process:
+
+```text
+account1 balance decreases
+account2 balance increases
+history updated
+```
+
+---
+
+# Important Differences
+
+| Concept | Meaning |
+|----------|----------|
+| Class | Blueprint |
+| Object | Real instance |
+| self | Current object |
+| __init__ | Constructor |
+| Instance Variable | Belongs to object |
+| Class Variable | Shared by class |
+| Method | Function inside class |
+
+---
+
+# Common Beginner Mistakes
+
+## Forgetting self
+
+Wrong:
+
+```python
+def deposit(amount):
+```
+
+Correct:
+
+```python
+def deposit(self,amount):
+```
+
+---
+
+## Forgetting object creation
+
+Wrong:
+
+```python
+deposit(500)
+```
+
+Correct:
+
+```python
+account.deposit(500)
+```
+
+---
+
+## Confusing class and object
+
+Wrong thinking:
+
+```text
+Class = Object
+```
+
+Correct:
+
+```text
+Class → Blueprint
+Object → Actual instance
+```
+
+---
+
+# Interview Questions
+
+## What is OOP?
+
+Programming style that uses classes and objects.
+
+---
+
+## What is a class?
+
+Blueprint for creating objects.
+
+---
+
+## What is an object?
+
+Instance of a class.
+
+---
+
+## What is self?
+
+Reference to current object.
+
+---
+
+## What is __init__?
+
+Constructor automatically executed during object creation.
+
+---
+
+## Difference between Instance Variable and Class Variable?
+
+Instance Variable:
+- Unique for each object
+
+Class Variable:
+- Shared among all objects
+
+---
+
+# Quick Revision
+
+1. Class = Blueprint
+2. Object = Instance
+3. self = Current Object
+4. __init__ runs automatically
+5. Instance variables belong to object
+6. Class variables shared by all objects
+7. Methods are functions inside class
+8. BankAccount stores balance and transactions
+9. Deposit increases balance
+10. Withdraw decreases balance
+11. Transfer moves money between objects
+12. OOP combines data and behavior together
+````
+
+These notes are enough for revision before interviews and for future reference without rewatching the Day 8 lesson.
 
 
 
