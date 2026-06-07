@@ -1,3 +1,23 @@
+#creating class
+class Mohammad():
+    Graduation="MCA"
+#Creating Object
+obj=Mohammad()
+print(obj.Graduation)
+#deleting an object
+del obj
+#Creating Multiple Objects
+class Mohammad:
+    x="MCA"
+#Creating Multimple Objects
+p1=Mohammad()
+p2=Mohammad()
+p3=Mohammad()
+print(p1.x)
+print(p2.x)
+print(p3.x)
+
+
 """#Basic class
 class student:
     #creating a method because its inside the class
@@ -108,6 +128,73 @@ class ATM:
         else:
             print("Incorrect pin")
         self.menu()
-
-        
+      
 obj = ATM()
+
+
+
+####################################__init__######################################################
+
+##Create a class named Person, use the __init__() method to assign values for name and age:
+class Person:
+    def __init__(self, name, age):
+        self.name=name
+        self.age=age
+    def greet(self):
+        print("Hello, my name is", self.name, self.age)
+# Create an object
+p1=Person("John", 36)
+# Call the greet method
+p1.greet()
+
+
+#Create a Person class with multiple parameters:
+class Person
+    def __init__(self, name, age, city, country):
+        self.name=name
+        self.age=age
+        self.city=city
+        self.country=country
+ p1=person("Mohammad", 30, "Skonda", "HYD")
+print(p1.name)
+print(p1.age)
+print(p1.city)
+print(p1.country)
+
+
+################################Self####################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Employee:
+    def __init__(self, name):
+        self.name=name
+    
+class Company:
+    def __init__(self, company_name,employee):
+        self.company_name=company_name
+        self.employee=employee
+emp=Employee("Mohammad")
+comp=company("Google", emp)  
+print(comp.employee, name)
