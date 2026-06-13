@@ -1,6 +1,6 @@
 
 #If there is agregation bbetween the two classes then we can use getters and setters to access the private members of  the class. 
-"""class Customer:
+class Customer:
     def __init__(self, name, gender, adress):
         self.name=name
         self.gender=gender
@@ -15,8 +15,7 @@ class Adress:
 add1=Adress('Singarayakonda', 23456, 'haryana')
 cust=Customer("nitish","male",add1 )
  
- """
-"""
+
 # In the below code we have made city as private member of the class Adress and we are accessing it in the class Customer using getter method get_city().
 class Customer:
     def __init__(self, name, gender, address):
@@ -35,9 +34,6 @@ class Adress:
 add1=Adress('Singarayakonda', 23456, 'haryana')
 cust=Customer("nitish","male",add1 )
 cust.print_address()
-"""
- 
-
 
 
 
@@ -112,7 +108,6 @@ s.buy()
 s.review()
 
 
-"""
 class Parent:
     def __init___(self):
         self.name="Mohammad"
@@ -126,10 +121,10 @@ class Student(Parent):
     def enroll(self):
         print("Enroll into the course") 
 s=Student()      
-print(s.name)"""
+print(s.name)
 
 
-"""
+
 class phone: #parent class
     def __init___(self, price, brand):
         self.price=price
@@ -141,11 +136,11 @@ class Smartphone(phone): #child class
 #creating an object
 s1=Smartphone(20000, "apple") #child class object
 print(s1.brand)
-s1.buy()"""
+s1.buy()
 
 
 ################################   METHOD OVERRIDING     ##########################
-"""
+
 class Phone: #parent class
     def __init__(self, price, brand):
         self.price=price
@@ -157,7 +152,7 @@ class Smartphone(Phone): #child class inheriting parent class
 #object creation
 s1=Smartphone(2000, "apple")
 print(s1.brand) #using parent property
-s1.buy() #using parent method """
+s1.buy() #using parent method 
 
 
 
@@ -226,8 +221,6 @@ print([1,2,3]+[4,5])
 
 
 
-"""
-
 class phone:
     def buy(self):
         print("Buying a normal phone")
@@ -236,4 +229,4 @@ class Smartphone(phone):
     def buy(self):
         print("Buying a smartphone") #override
 s=Smartphone()
-s.buy()        """
+s.buy()       
