@@ -1,7 +1,5 @@
 import json
-
 students = {}
-
 while True:
     print("\n1.Add Student")
     print("2.View Students")
